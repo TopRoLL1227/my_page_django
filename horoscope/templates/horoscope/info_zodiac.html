@@ -1,10 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Гороскоп для {{sign|capfirst}}</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block title %}
+Гороскоп для {{sign|capfirst}}
+{% endblock %}
+
+{% block content %}
+    <h2>Content from info_zodiac.html</h2>
     <h1>Додаток гороскоп</h1>
 
     {% if description_zodiac is None %}
@@ -30,5 +31,4 @@
     <p>Кортеж {{my_tuple|join:"!"}}</p>
     <p>Екземпляр класу {{my_class}} {{my_class.age}}</p>
     <p>{{value|default:"Nothing"}}</p>
-</body>
-</html>
+{% endblock %}

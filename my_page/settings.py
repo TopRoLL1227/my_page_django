@@ -57,7 +57,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            #'/home/volodymyr/git/my_page/fake/templates'
+            BASE_DIR / 'templates'
         ],  # вказуються шляхи де Django потрібно шукати шаблони, абсолютний шлях
         'APP_DIRS': True,
         'OPTIONS': {
