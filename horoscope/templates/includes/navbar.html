@@ -1,0 +1,12 @@
+<nav>
+    <a href="{% url 'index' %}">Головна</a> |
+    <a href="https://en.wikipedia.org/wiki/BMW">Джерело</a>
+    {% for zodiac in zodiacs %}
+    | <a href="{% url '1' sign_zodiac=zodiac %}">{{ forloop.counter0 }}:{{ zodiac|title }}</a>
+    {% endfor %}
+</nav>
+
+<p>Змінна sign - {{sign}}</p>
+<p>Змінна description_zodiac = {{description_zodiac}}</p>
+<p>Змінна zodiacs = {{zodiacs}}</p>
+<p>Змінна a = {{a}}</p>

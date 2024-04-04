@@ -1,10 +1,13 @@
 {% extends 'base.html' %}
 
+{% load static %}
+
 {% block title %}
 Гороскоп для {{sign|capfirst}}
 {% endblock %}
 
 {% block content %}
+    {% include 'includes/navbar.html' only with a='GO' %}
     <h2>Content from info_zodiac.html</h2>
     <h1>Додаток гороскоп</h1>
 
@@ -31,4 +34,8 @@
     <p>Кортеж {{my_tuple|join:"!"}}</p>
     <p>Екземпляр класу {{my_class}} {{my_class.age}}</p>
     <p>{{value|default:"Nothing"}}</p>
+{% endblock %}
+
+{% block css_additional %}
+<link rel="stylesheet" href="{% static 'horoscope/css/info.css' %}">
 {% endblock %}

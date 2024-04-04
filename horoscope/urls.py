@@ -10,7 +10,7 @@ urlpatterns = [
     path('<yyyy:sign_zodiac>/', views.get_yyyy_converters),
     path('<int:sign_zodiac>/', views.get_info_zodiac_sign_by_number),
     path('<str:sign_zodiac>/', views.get_info_zodiac_sign, name='1'),
-    path('', views.index),
+    path('', views.index, name='index'),
 ]
 
 
