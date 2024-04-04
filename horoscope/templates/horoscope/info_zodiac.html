@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Гороскоп для {{sign|capfirst}}</title>
+</head>
+<body>
+    <h1>Додаток гороскоп</h1>
+
+    {% if description_zodiac is None %}
+        <h2>Не правильний знак зодіака - {{sign}}</h2>
+    {% else %}
+        <h2> {{description_zodiac|capfirst|safe}}</h2>
+    {% endif %}
+
+    {% if my_list|length >= 3 %}
+        <p>Список із 3 й більше елементів - {{my_list}}</p>
+    {% elif my_list|length == 2 %}
+        <p>Список із 2 елементів - {{my_list}}</p>
+    {% elif my_list|length == 1 %}
+        <p> Список із 1 елементів - {{my_list}}</p>
+    {% else %}
+        <p>Пустий список {{my_list}}</p>
+    {% endif %}
+
+    <p>Ціле число {{my_int|add:"100"}}</p>
+    <p>Дробове Число {{my_float|add:my_int}}</p>
+    <p>Список {{my_list}}</p>
+    <p>Словник {{my_dict}}, ключ - {{my_dict.name}}</p>
+    <p>Кортеж {{my_tuple|join:"!"}}</p>
+    <p>Екземпляр класу {{my_class}} {{my_class.age}}</p>
+    <p>{{value|default:"Nothing"}}</p>
+</body>
+</html>

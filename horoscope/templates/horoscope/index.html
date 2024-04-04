@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Menu</title>
+</head>
+<body>
+    <ul>
+        {% for zodiac in zodiacs %}
+            <li><a href="{% url '1' sign_zodiac=zodiac %}">{{ forloop.counter0 }}:{{ zodiac|title }}</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
